@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+	margin:0;
+	padding:0;
+	box-shadow: border-box;
+	scroll-behavior: smooth;
+}
+body{
+	font-size:10px;
+	font-family: 'Poppins', sans-serif;
+}
+a{
+	text-decoration: none !important;
+}
+
+button{
+	cursor: pointer;
+}
+/**********************
+    PRELOADER
+     .loading-area{
+	position: fixed;
+	width:100%;
+	height: 100%;
+	top:0;
+	left:0;
+	background:#ED2D46;
+    z-index: 9999;
+    
+}
+.load-text{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.loading-area p{
+	display: block;
+	font-size:140%;
+	color:#fff;
+	font-weight: 400;
+}
+.loading-area.done{
+	animation:loadingDone 2s;
+	animation-fill-mode: forwards;
+}
+@keyframes loadingDone{
+	0%{
+		
+		opacity: 1;
+	}
+	70%{
+	   opacity: 0;
+	}
+	100%{
+		opacity: 0;
+		display: none;
+	}
+}
+
+**********************/
+
+/*==================================
+              HOME SECTION 
+====================================*/
+
+/*********  ALERT    ************/
+#home-section .alert{
+	background: #ED2D46;
+	color:#fff;
+	font-size:140%;
+	font-weight: 400;
+	
+}
+#home-section .close{
+	color:white;
+
+}
+/*********  NAVBAR    ************/
+.alert h1{
+	display: inline-block;
+	font-size:120%;
+	font-weight: 300;
+}
+
+nav{
+	background:#fff !important;
+	position: fixed;
+	width: 100%;
+	left:0;
+	top:0px;
+	z-index: 999;
+
+
+}
+.nav-item{
+	background-color: black;
+	z-index:0;	
+	
+}
+
+.navbar-nav{
+	z-index: 0;
+	float:right;
+	
+}
+.navbar-brand img{
+	width:80% !important;
+	margin-top:-20px;
+	float:left:;
+}
+nav .navbar-nav .nav-link{
+	color:#fff !important;
+	font-size:140%;
+	font-weight: 600;
+	padding:15px 20px !important;
+	cursor: pointer;
+	position: relative;	
+
+	
+}
+
+ .nav-link::after{
+	content: "";
+	background: #ed2d46;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+    z-index: -1;
+	border-radius: 0px 50px 0px 0px;
+	transition: .3s linear;
+}
+	.navbar-light .navbar-nav .nav-link:hover::after{
+      width:100%;
+      height: 100%;
+      border-radius:0px 15px 0px 0px;
+
+	}
+	
+	.nav > li > a:focus, .nav > li > a:hover{
+		background:none !important;
+	}
+
+	/**********sticky navbar**********/
+	.navbar-scroll{
+		position: fixed;
+		top:0;
+		left:0;
+		width:100%;
+		background: rgba(0,0,0,0.85);
+		padding: 15px 20px;
+		transition: 0.5s;
+		z-index: 999;
+		animation: scroll 0.5s 1;
+		box-shadow: 2px 2px 5px rgba(237,45,70,0.75);
+		
+	}
+	@keyframes scroll{
+		0%{
+			transform:translateY(-100%);
+		}
+		100%{
+			transform: translateY(0%);
+		}
+	}
+	
+/*********  CAROUSEL SLIDER    ************/
+
+.item-1-overlay{
+	position: absolute;
+	background-color: rgba(0,0,0,0.85);
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+.carousel-control-prev,
+.carousel-control-next{
+	opacity: 1 !important;
+}
+.carousel-control-prev i,
+.carousel-control-next i{
+	font-weight:500;
+	font-size:300%;
+	color:#000 ;
+	background:#fff;
+	padding:5px 30px;
+	border-radius: 25px;
+	
+}
+.carousel-control-prev i:hover,
+.carousel-control-next i:hover{
+	background:#ED2D46;
+	color:#fff;
+}
+.carousel-control-prev i {
+	margin-left:-70px;
+}
+.carousel-control-next i {
+	margin-right:-70px;
+}
+.carousel-caption{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.carousel-caption h1{
+	font-size:400%;
+	font-weight: 800;
+	margin-bottom: -5px !important;
+
+}
+.carousel-caption span{
+	font-size:550%;
+	font-weight: 500;
+	margin-top:0px;
+}
+.carousel-caption p{
+	font-size:160%;
+	font-weight: 400;
+}
+.carousel-caption button{
+	padding:10px 30px ;
+	background:transparent;
+	color:#fff;
+	border-radius: 25px;
+	border:2px solid #fff;
+	font-size: 140%;
+	text-transform: uppercase;
+	transition: all .3s ease ;
+	cursor: pointer;
+}
+.carousel-caption button:hover{
+	background:#ED2D46;
+}
+/*==================================
+              ABOUT SECTION 
+====================================*/
+#about-section .container{
+	border-bottom: 2px dotted #ddd;
+	padding-bottom: 25px;
+}
+#about-section h4{
+	font-size:140%;
+	font-weight: 500;
+}
+#about-section h2{
+	font-weight: 800;
+	font-size:350%;
+}
+#about-section .red{
+	color:red;
+	font-size:160%;
+}
+#about-section .black{
+	background:url('../upload-images/about-bg.jpg') no-repeat  bottom center/cover;
+    padding:10px 0px 30px 0px;
+    
+
+}
+#about-section .black p{
+	font-size: 160%;
+	
+}
+#about-section  button{
+	padding:15px 45px;
+	background:black;
+	color:#fff;
+	margin-top:10px;
+	border-radius: 25px;
+	border:none;
+	font-size: 140%;
+
+}
+/*==================================
+              TAB SECTION 
+====================================*/
+#tab-section .container{
+	border-bottom: 2px dotted #ddd;
+}
+
+
+#tab-section ul.nav-list li a{
+	font-size:160%;
+	font-weight: 500;
+    color:black; 
+    margin-left:3px;
+    background:#ddd;
+	 padding:7px 110px;
+          
+}
+
+#tab-section ul.nav-list li a:hover{
+	color:white !important;
+	background:black !important;
+}
+#tab-section ul.list-circle {
+	margin:20px auto;
+	width: 1000px;
+	
+}
+#tab-section ul.list-circle li a{
+	font-size: 140%;
+	color:black;
+	margin-right:15px;
+	font-weight: 400;
+	text-align: center;
+}
+#tab-section ul.list-circle li a:hover{
+	color:black ;
+}
+.tab-content h1{
+    font-weight: 300;
+	margin-bottom:20px;
+	font-size: 140%;
+}
+.nav-pills > li.active > a, .nav-pills > li > a:focus, .nav-pills > li> a:hover{
+	background:#ed2d46  !important;
+	color: #fff !important;
+}
+
+
+/*==================================
+              CUSTOMER  SECTION 
+====================================*/
+.item-text{
+	background-color:#ed2d46;
+	color:#fff; 
+	padding:10px;
+}
+.item-text p{
+	font-size:140%;
+	font-weight: 400;
+	letter-spacing: -.5px;
+}
+.item-text h3{
+	font-size:220%;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.item-over{
+	position: relative;
+}
+.overlay-text{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	display: none;
+}
+#customer-section .item i{
+	background:#fff;
+	color:black;
+	font-size: 200%;
+	cursor: pointer;
+	padding: 10px 15px;
+}
+.item-over-text:hover .overlay-text{
+    display: block;
+}
+.owl-1.owl-carousel .owl-nav button.owl-next, .owl-1.owl-carousel .owl-nav button.owl-prev, .owl-1.owl-carousel button.owl-dot{
+    padding:3px !important;
+    font-size: 350%;
+    
+
+}
+.owl-1.owl-carousel .owl-nav .owl-prev{
+	position: absolute;
+	background-color: black;
+    color:white;
+    
+    border-radius: 0px 50px 50px 0px;
+    top:35%;
+    left:-10%;
+}
+.owl-1.owl-carousel .owl-nav .owl-next{
+	position: absolute;
+	background-color: black;
+    color:white;
+    border-radius: 50px 0px 0px 50px;
+    top:35%;
+    right:-10%;
+}
+.owl-1.owl-carousel .owl-nav .owl-prev span,
+.owl-1.owl-carousel .owl-nav .owl-next span{
+	padding:3px 30px;
+}
+
+/*==================================
+              PRICE SECTION 
+====================================*/
+#price-section{
+	background-color: #F9F9F9;
+	
+}
+.price-text h2{
+    font-size:320%;
+    font-weight: 700;
+    color:black;
+}
+.price-text p{
+	font-size:180%;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+#price-section .card{
+	position: relative;
+	border:none !important;
+	background:#fff;
+	transition:all .5s ease;
+	cursor: pointer;
+}
+#price-section .card-title::before{
+	content: "";
+    height:5px;
+    width:0;
+    left:0;
+    top:0;
+    transition:all .5s ease;
+    background:red;
+    position: absolute;
+    display: block;
+    
+}
+#price-section .card:hover .card-title::before{
+   width:100%;
+}
+#price-section .card:hover{
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+#price-section .card-title{
+	font-size:220%;
+	color:white;
+	background:black;
+	padding: 8px !important;
+	margin-top:30px !important;
+}
+p.p-title{
+	font-size:140%;
+	font-weight: 600;
+	
+
+}
+.card p{
+	font-size:120%;
+	font-weight: 400;
+}
+.dolor{
+	background:#ed2d46;
+	color:white;
+	font-size: 120%;
+	padding:5px 8px;
+	display: inline-block;
+}
+/*==================================
+              TEAM SECTION 
+====================================*/
+#team-section{
+	background-color: #F9F9F9;
+}
+#team-section .card{
+	border:none !important;
+	cursor: pointer;
+	background:#fff;
+	position: relative;
+	padding:5px 15px;
+	overflow: hidden;
+	transition: all .5s ease;
+
+}
+.card .team-over{
+	position: relative;
+}
+.card .team-overlay{
+	position: absolute;
+	top:0;
+	background:rgba(237,45,70,0.45);
+    width:100%;
+	height:0;
+	opacity: 0;
+	transition:all .7s ease;
+}
+.card .team-overlay-text{
+	position:absolute;
+	top:80%;
+	left:50%;
+	transform: translate(-50%,-80%);
+}
+#team-section .card:hover .team-overlay{
+    height: 100%;
+    opacity: 1;
+}
+#team-section .card .team-overlay-text i{
+	background:black;
+	color:white;
+	font-size: 200%;
+	font-weight: 500;
+	padding:10px 15px;
+	margin-bottom: 7px;
+}
+#team-section .card h3{
+	font-size:200%;
+	font-weight: 700;
+}
+#team-section p{
+	font-size:150%;
+	font-weight: 400;
+}
+.card small{
+	font-size:120%;
+}
+#team-section .card-title::after{
+   position: absolute;
+   display: block;
+   content:"";
+   height:2px;
+   background:black;3   width:0;
+   transition:all .5s ease;
+   top:0;
+   left:0;
+}
+#team-section .card:hover .card-title::after{
+	width:100%;
+}
+#team-section .card-title::before{
+   position: absolute;
+   display: block;
+   content:"";
+   height:2px;
+   background:black;3   width:0;
+   transition:all .5s ease;
+   bottom:0;
+   left:0;
+}
+#team-section .card:hover .card-title::before{
+	width:100%;
+}
+#team-section .card::after{
+   position: absolute;
+   display: block;
+   content:"";
+   height:0;
+   background:black;
+   width:2px;
+   transition:all .3s ease;
+   top:0;
+   left:0;
+}
+#team-section .card:hover::after{
+	height:100%;
+}
+#team-section .card::before{
+   position: absolute;
+   display: block;
+   content:"";
+   height:0;
+   background:black;
+   width:2px;
+   transition:all .3s ease;
+   bottom:0;
+   right:0;
+}
+#team-section .card:hover::before{
+	height: 100%;
+}
+/*==================================
+              TESTIMONIAL SECTION 
+====================================*/
+#testimonial-section{
+	background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('../upload-images/parallax_20.jpg') no-repeat center /cover;
+    color:#fff;	
+    z-index: -1;
+}
+#testimonial-section h2{
+	color:#fff;
+}
+#testimonial-section .intro-section{
+	text-align:right;
+	padding-right:15px;
+}
+#testimonial-section .intro-section h4{
+	font-size:180%;
+	font-weight: 700;
+}
+#testimonial-section .intro-section p{
+	font-size:160%;
+}
+#testimonial-section .intro-section .fa-quote-right{
+     font-weight: 700;
+     font-size: 250%;
+}
+#testimonial-section .intro-section .fa-minus{
+	font-weight: 300;
+}
+#testimonial-section .support{
+	padding:35px 25px;
+	background:#ed2d46;
+	color:white;
+	font-size:140%;
+	text-align: right;
+	margin-top:20px;
+	cursor: pointer;
+}
+#testimonial-section .item:hover .support{
+	background:black;
+	border:1px solid #ed2d46;
+}
+#testimonial-section .support h3{
+	font-size:200%;
+	font-weight: 700;
+}
+
+.owl-2.owl-carousel .owl-nav button.owl-next, .owl-2.owl-carousel .owl-nav button.owl-prev, .owl-2.owl-carousel button.owl-dot{
+    padding:3px !important;
+    font-size: 350%;
+    
+
+}
+.owl-2.owl-carousel .owl-nav .owl-prev{
+	position: absolute;
+	background-color: white;
+    color:black;
+    
+    border-radius: 0px 50px 50px 0px;
+    top:35%;
+    left:-10%;
+}
+.owl-2.owl-carousel .owl-nav .owl-next{
+	position: absolute;
+	background-color: white;
+    color:black;
+    border-radius: 50px 0px 0px 50px;
+    top:35%;
+    right:-10%;
+}
+.owl-2.owl-carousel .owl-nav .owl-prev span,
+.owl-2.owl-carousel .owl-nav .owl-next span{
+	padding:3px 30px;
+}
+/*==================================
+              FOOTER SECTION 
+====================================*/
+#footer-section{
+	background:#F6F6F6;
+}
+#footer-section ul li{
+	display: inline-block;
+	list-style-type: none;
+	padding:0px 20px;
+}
+#footer-section ul li a{
+	font-size:160%;
+	font-weight: 700;
+	color:#000;
+}
+#footer-section ul li a:hover{
+	color:#000;
+}
+#footer-section h1{
+	font-size:140%;
+	font-weight: 400;
+}
+#footer-section span{
+    font-weight: 700;
+    color:#ed2d46;
+    cursor: pointer;
+}
+/*=====================================================
+                SERVICES PAGE STRAT HERE
+=======================================================*/
+#service-section{
+	background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('../upload-images/barber_all.jpg') no-repeat center/cover;
+    min-height: 300px;	
+}
+.service-text h1{
+	font-weight: 700;
+	color:#fff;
+	font-weight: 450%;
+}
+
+.service-text button{
+	background:#ed2d46;
+	color:#fff;
+	font-size: 140%;
+	cursor: pointer;
+	border:none; 
+	font-weight: 600;
+	padding:15px 10px;
+}
+.service-text button span{
+	color:#000;
+}
+/************************
+      OUR SERVICE SECTION
+*************************/
+#our-service{
+	background:#F9F9F9;
+	z-index: 0;
+}
+.our-text h2::after{
+	content:"";
+	display: block;
+	width:100px;
+	height: 3px;
+	border-radius: 10px;
+	background:black;
+	margin:10px auto;
+}
+.our-text p{
+	font-weight: 400;
+	font-size: 160%;
+	
+}
+.our-text h2{
+	font-size:450%;
+	font-weight: 700;
+}
+#our-service .card{
+	border:none !important;
+	background:#fff;
+	border-radius: 15px;
+	padding:20px;
+	text-align: center;
+}
+#our-service .card img{
+	width:30% !important;
+	margin:15px auto;
+	border:10px solid #fff;
+	transition: all .5s ease;
+}
+#our-service .card:hover img{
+	border-radius: 50%;
+}
+#our-service .card h3{
+	font-weight: 700;
+}
+#our-service .card p{
+	font-weight: 400;
+	font-size: 140%;
+}
+/************************
+      CARD SERVICE SECTION
+*************************/
+#card-service{
+
+}
+/*=====================================================
+                APPOINMENT  PAGE STRAT HERE
+=======================================================*/
+#book-section p{
+	font-size: 150%;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+#book-section h2{
+	font-size: 350%;
+	font-weight: 700;
+	margin-top:3px;
+}
+#book-section form{
+	background:#fff;
+	box-shadow:-2px  2px 15px #ddd;
+}
+
+#book-section form button{
+	padding:15px 35px;
+	color:#fff;
+	background: #ED2D46;
+	border:none;
+	border-radius: 35px;
+	font-weight:400;
+	font-size: 140%;
+	text-transform:uppercase;
+}
+#book-section.contact form button{
+	padding:10px 25px;
+	font-size: 120%;
+}
+#book-section.contact form input[type="text"],
+#book-section.contact form input[type="email"],
+#book-section.contact form input[type="phone"],
+#book-section.contact form textarea,
+#book-section.contact form select{
+	padding:20px !important;
+	background:black;
+	color:#fff;
+	border:none !important;
+		
+}
+#book-section.appoinment form input[type="text"],
+#book-section.appoinment form input[type="email"],
+#book-section.appoinment form input[type="phone"],
+#book-section.appoinment form textarea,
+#book-section.appoinment form select{
+	padding:25px  !important;
+	background:black !important;
+	color:#fff !important;
+	border:none !important;
+	line-height: 30px !important;	
+}
+#book-section.contact{
+	background:url('../images/bg.png') no-repeat center/cover;
+}
+
+/*=========================================================================================
+                                    SCROLLUP BUTTON DESIGN
+==========================================================================================*/
+.scrollUp{
+	position: fixed;
+	right:20px;
+	bottom:30px;
+	opacity:0;
+	padding:12px 5px 7px 15px;
+	width:50px;
+	height:50px;
+	background:#ed2d46;
+	color:#fff;
+	transition: .5s;
+	border-radius: 50%;
+
+}
+.scrollUp i{
+	color:white;
+	font-size:200%;
+}
+.scrollUp i:hover{
+	color:white;
+}
+.scrollUp.active{
+	pointer-events: auto;
+	opacity: 1;
+	transform: translateY(-55px);
+	bottom:35px;
+}
